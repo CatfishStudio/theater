@@ -5,3 +5,4 @@ C:\GIT\Theater\Theater\obj\Debug\Theater.Properties.Resources.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.csproj.GenerateResource.Cache
 C:\GIT\Theater\Theater\obj\Debug\Theater.exe
 C:\GIT\Theater\Theater\obj\Debug\Theater.pdb
+C:\GIT\Theater\Theater\obj\Debug\Theater.Form1.resources
