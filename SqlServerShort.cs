@@ -9,5 +9,9 @@ namespace Theater
 {
     class SqlServerShort
     {
+        public SqlServerShort()
+        {
+
+        }
     }
 }

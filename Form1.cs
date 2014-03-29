@@ -18,7 +18,21 @@ namespace Theater
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //...
         }
+
+        private void выходИзПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Authors fAurhors = new Authors();
+            fAurhors.MdiParent = this;
+            fAurhors.Show();
+        }
+
+        
     }
 }

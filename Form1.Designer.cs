@@ -30,20 +30,20 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.выходИзПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.авторыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.работникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.спектаклиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.местаВЗалеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.документыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.билетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.жуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.труппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.репертуарToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.местаВЗалеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходИзПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,84 @@
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.файлToolStripMenuItem.Text = "Файл.";
             // 
+            // выходИзПрограммыToolStripMenuItem
+            // 
+            this.выходИзПрограммыToolStripMenuItem.Name = "выходИзПрограммыToolStripMenuItem";
+            this.выходИзПрограммыToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.выходИзПрограммыToolStripMenuItem.Text = "Выход из программы";
+            this.выходИзПрограммыToolStripMenuItem.Click += new System.EventHandler(this.выходИзПрограммыToolStripMenuItem_Click);
+            // 
+            // справочникиToolStripMenuItem
+            // 
+            this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.авторыToolStripMenuItem,
+            this.работникиToolStripMenuItem,
+            this.спектаклиToolStripMenuItem,
+            this.местаВЗалеToolStripMenuItem});
+            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.справочникиToolStripMenuItem.Text = "Справочники";
+            // 
+            // авторыToolStripMenuItem
+            // 
+            this.авторыToolStripMenuItem.Name = "авторыToolStripMenuItem";
+            this.авторыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.авторыToolStripMenuItem.Text = "Авторы";
+            this.авторыToolStripMenuItem.Click += new System.EventHandler(this.авторыToolStripMenuItem_Click);
+            // 
+            // работникиToolStripMenuItem
+            // 
+            this.работникиToolStripMenuItem.Name = "работникиToolStripMenuItem";
+            this.работникиToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.работникиToolStripMenuItem.Text = "Работники";
+            // 
+            // спектаклиToolStripMenuItem
+            // 
+            this.спектаклиToolStripMenuItem.Name = "спектаклиToolStripMenuItem";
+            this.спектаклиToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.спектаклиToolStripMenuItem.Text = "Спектакли";
+            // 
+            // местаВЗалеToolStripMenuItem
+            // 
+            this.местаВЗалеToolStripMenuItem.Name = "местаВЗалеToolStripMenuItem";
+            this.местаВЗалеToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.местаВЗалеToolStripMenuItem.Text = "Места в зале";
+            // 
+            // документыToolStripMenuItem
+            // 
+            this.документыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.билетToolStripMenuItem});
+            this.документыToolStripMenuItem.Name = "документыToolStripMenuItem";
+            this.документыToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.документыToolStripMenuItem.Text = "Документы";
+            // 
+            // билетToolStripMenuItem
+            // 
+            this.билетToolStripMenuItem.Name = "билетToolStripMenuItem";
+            this.билетToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.билетToolStripMenuItem.Text = "Билет";
+            // 
+            // жуToolStripMenuItem
+            // 
+            this.жуToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.труппыToolStripMenuItem,
+            this.репертуарToolStripMenuItem});
+            this.жуToolStripMenuItem.Name = "жуToolStripMenuItem";
+            this.жуToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.жуToolStripMenuItem.Text = "Журналы";
+            // 
+            // труппыToolStripMenuItem
+            // 
+            this.труппыToolStripMenuItem.Name = "труппыToolStripMenuItem";
+            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.труппыToolStripMenuItem.Text = "Труппы";
+            // 
+            // репертуарToolStripMenuItem
+            // 
+            this.репертуарToolStripMenuItem.Name = "репертуарToolStripMenuItem";
+            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.репертуарToolStripMenuItem.Text = "Репертуар";
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -92,82 +170,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(784, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // справочникиToolStripMenuItem
-            // 
-            this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.авторыToolStripMenuItem,
-            this.работникиToolStripMenuItem,
-            this.спектаклиToolStripMenuItem,
-            this.местаВЗалеToolStripMenuItem});
-            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.справочникиToolStripMenuItem.Text = "Справочники";
-            // 
-            // авторыToolStripMenuItem
-            // 
-            this.авторыToolStripMenuItem.Name = "авторыToolStripMenuItem";
-            this.авторыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.авторыToolStripMenuItem.Text = "Авторы";
-            // 
-            // работникиToolStripMenuItem
-            // 
-            this.работникиToolStripMenuItem.Name = "работникиToolStripMenuItem";
-            this.работникиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.работникиToolStripMenuItem.Text = "Работники";
-            // 
-            // спектаклиToolStripMenuItem
-            // 
-            this.спектаклиToolStripMenuItem.Name = "спектаклиToolStripMenuItem";
-            this.спектаклиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.спектаклиToolStripMenuItem.Text = "Спектакли";
-            // 
-            // документыToolStripMenuItem
-            // 
-            this.документыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.билетToolStripMenuItem});
-            this.документыToolStripMenuItem.Name = "документыToolStripMenuItem";
-            this.документыToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.документыToolStripMenuItem.Text = "Документы";
-            // 
-            // билетToolStripMenuItem
-            // 
-            this.билетToolStripMenuItem.Name = "билетToolStripMenuItem";
-            this.билетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.билетToolStripMenuItem.Text = "Билет";
-            // 
-            // жуToolStripMenuItem
-            // 
-            this.жуToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.труппыToolStripMenuItem,
-            this.репертуарToolStripMenuItem});
-            this.жуToolStripMenuItem.Name = "жуToolStripMenuItem";
-            this.жуToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.жуToolStripMenuItem.Text = "Журналы";
-            // 
-            // труппыToolStripMenuItem
-            // 
-            this.труппыToolStripMenuItem.Name = "труппыToolStripMenuItem";
-            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.труппыToolStripMenuItem.Text = "Труппы";
-            // 
-            // репертуарToolStripMenuItem
-            // 
-            this.репертуарToolStripMenuItem.Name = "репертуарToolStripMenuItem";
-            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.репертуарToolStripMenuItem.Text = "Репертуар";
-            // 
-            // местаВЗалеToolStripMenuItem
-            // 
-            this.местаВЗалеToolStripMenuItem.Name = "местаВЗалеToolStripMenuItem";
-            this.местаВЗалеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.местаВЗалеToolStripMenuItem.Text = "Места в зале";
-            // 
-            // выходИзПрограммыToolStripMenuItem
-            // 
-            this.выходИзПрограммыToolStripMenuItem.Name = "выходИзПрограммыToolStripMenuItem";
-            this.выходИзПрограммыToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.выходИзПрограммыToolStripMenuItem.Text = "Выход из программы";
             // 
             // Form1
             // 
