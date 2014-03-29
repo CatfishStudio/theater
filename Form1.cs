@@ -26,11 +26,21 @@ namespace Theater
             Application.Exit();
         }
 
-        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowAuthor()
         {
             Authors fAurhors = new Authors();
             fAurhors.MdiParent = this;
             fAurhors.Show();
+        }
+
+        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAuthor();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ShowAuthor();
         }
 
         
