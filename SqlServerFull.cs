@@ -11,7 +11,7 @@ namespace Theater
     class SqlServerFull
     {
         /* Переменные */
-        private SqlConnection _connector;
+        private SqlConnection _connection;
         private SqlCommand _selectCommand;
         private SqlCommand _insertCommand;
         private SqlCommand _updateCommand;
@@ -25,12 +25,12 @@ namespace Theater
         /* Конструктор */
         public SqlServerFull()
         {
-            _connector = new SqlConnection();
-            _connector.ConnectionString = "server=SOMOV-PC\\SQLEXPRESS;uid=sa;password=12345;database=theater";
-            _selectCommand = new SqlCommand("", _connector);
-            _insertCommand = new SqlCommand("", _connector);
-            _updateCommand = new SqlCommand("", _connector);
-            _deleteCommand = new SqlCommand("", _connector);
+            _connection = new SqlConnection();
+            _connection.ConnectionString = "server=SOMOV-PC\\SQLEXPRESS;uid=sa;password=12345;database=theater";
+            _selectCommand = new SqlCommand("", _connection);
+            _insertCommand = new SqlCommand("", _connection);
+            _updateCommand = new SqlCommand("", _connection);
+            _deleteCommand = new SqlCommand("", _connection);
             _dataAdapter = new SqlDataAdapter();
         }
 
@@ -64,7 +64,7 @@ namespace Theater
         {
             try
             {
-                _connector.Open();
+                _connection.Open();
                 _selectCommand.CommandText = _strSelect;
                 _insertCommand.CommandText = _strInsert;
                 _updateCommand.CommandText = _strUpdate;
@@ -74,18 +74,17 @@ namespace Theater
                 _dataAdapter.UpdateCommand = _updateCommand;
                 _dataAdapter.DeleteCommand = _deleteCommand;
                 _dataAdapter.Fill(_DataSet, _tableName);
-                _connector.Close();
+                _connection.Close();
                 return true;
             }
             catch (Exception ex)
             {
-                _connector.Close();
+                _connection.Close();
                 if(MessageBox.Show("Ошибка выполнения SQL запроса." + System.Environment.NewLine + "Показать полное сообщение?","Ошибка:", MessageBoxButtons.YesNo) == DialogResult.Yes)	//Сообщение об ошибке
                 {
                     MessageBox.Show(ex.ToString());
                 }
                 return false; //произошла ошибка.
-                
             }
         }
 
@@ -93,7 +92,7 @@ namespace Theater
         {
             try
             {
-                _connector.Open();
+                _connection.Open();
                 _selectCommand.CommandText = _strSelect;
                 _insertCommand.CommandText = _strInsert;
                 _updateCommand.CommandText = _strUpdate;
@@ -103,12 +102,12 @@ namespace Theater
                 _dataAdapter.UpdateCommand = _updateCommand;
                 _dataAdapter.DeleteCommand = _deleteCommand;
                 _dataAdapter.Update(_DataSet, _tableName);
-                _connector.Close();
+                _connection.Close();
                 return true;
             }
             catch (Exception ex)
             {
-                _connector.Close();
+                _connection.Close();
                 if (MessageBox.Show("Ошибка выполнения SQL запроса." + System.Environment.NewLine + "Показать полное сообщение?", "Ошибка:", MessageBoxButtons.YesNo) == DialogResult.Yes)	//Сообщение об ошибке
                 {
                     MessageBox.Show(ex.ToString());
