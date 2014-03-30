@@ -22,19 +22,20 @@ namespace Theater
                     
         private void Authors_Load(object sender, EventArgs e)
         {
+            /* Инициализация объекта ДатаВремя*/
+             FieldTableDate ftd = new FieldTableDate(dataGridView1);
+
+            /* Подключение к базе данных, выбор данных из таблицы */
             _dataSet.Clear();
             _dataSet.DataSetName = "author";
             _sqlServer.SelectSqlCommand = "SELECT * FROM author";
             if (_sqlServer.ExecuteFill(_dataSet, "author"))
             {
-                //bindingSource1.DataSource = _dataSet;
-                //bindingSource1.DataMember = "author";
                 _bindingSource.DataSource = _dataSet;
                 _bindingSource.DataMember = "author";
                 bindingNavigator1.BindingSource = _bindingSource;
                 dataGridView1.DataSource = _bindingSource;
             }
-            else this.Close();
         }
 
     }

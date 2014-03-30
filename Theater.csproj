@@ -54,6 +54,7 @@
     <Compile Include="Authors.Designer.cs">
       <DependentUpon>Authors.cs</DependentUpon>
     </Compile>
+    <Compile Include="FieldTableDate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
