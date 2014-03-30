@@ -10,8 +10,9 @@ namespace Theater
     {
         private DateTimePicker _dateTimePicker;
         private DataGridView _dataGridView;
+        private int _indexColumn;
 
-        public FieldTableDate(DataGridView _dGridView)
+        public FieldTableDate(DataGridView _dGridView, int _columnIndex)
         {
             /* Инициализация объекта ДатаВремя*/
             _dateTimePicker = new DateTimePicker();
@@ -23,6 +24,7 @@ namespace Theater
             _dGridView.CellBeginEdit += this.dataGridView_CellBeginEdit;
             _dGridView.CellEndEdit += this.dataGridView_CellEndEdit;
             _dataGridView = _dGridView;
+            _indexColumn = _columnIndex;
         }
 
         /* Начало редактирование ячейки */
@@ -30,7 +32,7 @@ namespace Theater
         {
             try
             {
-                if ((_dataGridView.Focused) && (_dataGridView.CurrentCell.ColumnIndex == 2))
+                if ((_dataGridView.Focused) && (_dataGridView.CurrentCell.ColumnIndex == _indexColumn))
                 {
                     _dateTimePicker.Location = _dataGridView.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).Location;
                     _dateTimePicker.Visible = true;
@@ -62,9 +64,10 @@ namespace Theater
         {
             try
             {
-                if ((_dataGridView.Focused) && (_dataGridView.CurrentCell.ColumnIndex == 2))
+                if ((_dataGridView.Focused) && (_dataGridView.CurrentCell.ColumnIndex == _indexColumn))
                 {
                     _dataGridView.CurrentCell.Value = _dateTimePicker.Value.Date;
+                    _dateTimePicker.Visible = false;
                 }
             }
             catch (Exception ex)

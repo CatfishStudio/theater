@@ -43,6 +43,23 @@ namespace Theater
             ShowAuthor();
         }
 
+        private void ShowStaff()
+        {
+            Staff fStaff = new Staff();
+            fStaff.MdiParent = this;
+            fStaff.Show();
+        }
+
+        private void работникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowStaff();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            ShowStaff();
+        }
+
         
     }
 }
