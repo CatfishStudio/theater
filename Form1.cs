@@ -60,6 +60,23 @@ namespace Theater
             ShowStaff();
         }
 
+        private void ShowSpectacle()
+        {
+            Spectacle fSpectacle = new Spectacle();
+            fSpectacle.MdiParent = this;
+            fSpectacle.Show();
+        }
+
+        private void спектаклиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowSpectacle();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            ShowSpectacle();
+        }
+
         
     }
 }

@@ -8,3 +8,4 @@ C:\GIT\Theater\Theater\obj\Debug\Theater.pdb
 C:\GIT\Theater\Theater\obj\Debug\Theater.Form1.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Authors.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Staff.resources
+C:\GIT\Theater\Theater\obj\Debug\Theater.Spectacle.resources

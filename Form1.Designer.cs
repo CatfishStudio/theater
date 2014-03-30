@@ -123,6 +123,7 @@
             this.спектаклиToolStripMenuItem.Name = "спектаклиToolStripMenuItem";
             this.спектаклиToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.спектаклиToolStripMenuItem.Text = "Спектакли";
+            this.спектаклиToolStripMenuItem.Click += new System.EventHandler(this.спектаклиToolStripMenuItem_Click);
             // 
             // местаВЗалеToolStripMenuItem
             // 
@@ -245,6 +246,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 

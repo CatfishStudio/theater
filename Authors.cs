@@ -31,14 +31,14 @@ namespace Theater
             _sqlServer.InsertParametersAdd("@author_name", SqlDbType.VarChar, 255, "author_name");
             _sqlServer.InsertParametersAdd("@author_year_birth", SqlDbType.DateTime, 10, "author_year_birth");
             _sqlServer.InsertParametersAdd("@author_age", SqlDbType.Int, 3, "author_age");
-            _sqlServer.InsertParametersAdd("@author_country", SqlDbType.Char, 255, "author_country");
+            _sqlServer.InsertParametersAdd("@author_country", SqlDbType.VarChar, 255, "author_country");
             _sqlServer.InsertParametersAdd("@author_id", SqlDbType.Int, 11, "author_id");
 
             _sqlServer.UpdateSqlCommand = "UPDATE author SET author_name = @author_name, author_year_birth = @author_year_birth, author_age = @author_age, author_country = @author_country WHERE (author_id = @author_id)";
             _sqlServer.UpdateParametersAdd("@author_name", SqlDbType.VarChar, 255, "author_name");
             _sqlServer.UpdateParametersAdd("@author_year_birth", SqlDbType.DateTime, 10, "author_year_birth");
             _sqlServer.UpdateParametersAdd("@author_age", SqlDbType.Int, 3, "author_age");
-            _sqlServer.UpdateParametersAdd("@author_country", SqlDbType.Char, 255, "author_country");
+            _sqlServer.UpdateParametersAdd("@author_country", SqlDbType.VarChar, 255, "author_country");
             _sqlServer.UpdateParametersAdd("@author_id", SqlDbType.Int, 11, "author_id");
 
             _sqlServer.DeleteSqlCommand = "DELETE FROM author WHERE (author_id = @author_id)";

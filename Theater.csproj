@@ -75,6 +75,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Spectacle.resx">
+      <DependentUpon>Spectacle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Spectacle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spectacle.Designer.cs">
+      <DependentUpon>Spectacle.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerFull.cs" />
     <Compile Include="SqlServerShort.cs" />
