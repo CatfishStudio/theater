@@ -131,6 +131,7 @@
             this.местаВЗалеToolStripMenuItem.Name = "местаВЗалеToolStripMenuItem";
             this.местаВЗалеToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.местаВЗалеToolStripMenuItem.Text = "Места в зале";
+            this.местаВЗалеToolStripMenuItem.Click += new System.EventHandler(this.местаВЗалеToolStripMenuItem_Click);
             // 
             // документыToolStripMenuItem
             // 
@@ -144,7 +145,7 @@
             // 
             this.билетToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("билетToolStripMenuItem.Image")));
             this.билетToolStripMenuItem.Name = "билетToolStripMenuItem";
-            this.билетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.билетToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.билетToolStripMenuItem.Text = "Билет";
             // 
             // жуToolStripMenuItem
@@ -256,6 +257,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator1
             // 

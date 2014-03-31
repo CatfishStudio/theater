@@ -77,6 +77,23 @@ namespace Theater
             ShowSpectacle();
         }
 
+        private void ShowPlaces()
+        {
+            Places fPlaces = new Places();
+            fPlaces.MdiParent = this;
+            fPlaces.Show();
+        }
+
+        private void местаВЗалеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPlaces();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            ShowPlaces();
+        }
+
         
     }
 }
