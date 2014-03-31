@@ -24,6 +24,9 @@ namespace Theater
         private DataSet _dataSetAuthor = new DataSet();
         private DataSet _dataSetStaff = new DataSet();
 
+        private SqlServerFull _sqlServer3 = new SqlServerFull();
+        private DataSet _dataSetFromTable2 = new DataSet();
+
         /* Загрузка данных */
         private void TableLoad()
         {
@@ -141,6 +144,20 @@ namespace Theater
             }
         }
 
+        /* Загрузка данных из других таблиц */
+        private void ShowTable2(String _authorID, String _directorID, String _producerID, String _designerID, String _conductorID)
+        {
+            _dataSetFromTable2.Clear();
+            _dataSetFromTable2.DataSetName = "employee";
+            _sqlServer3.SelectSqlCommand = "SELECT employee.employee_id, employee.employee_name, author.author_id, author.author_name FROM employee, author" +
+                " WHERE (author.author_id = " + _authorID + " AND (employee.employee_id = " + _directorID + " OR employee.employee_id = " + _producerID + " OR employee.employee_id = " + _designerID + " OR employee.employee_id = " + _conductorID + "))";
+            if(_sqlServer3.ExecuteFill(_dataSetFromTable2, "employee"))
+            {
+                dataGridView2.DataSource = _dataSetFromTable2;
+                dataGridView2.DataMember = "employee";
+            }
+        }
+
         private void Spectacle_Load(object sender, EventArgs e)
         {
             /* Подключение к базе данных, выбор данных из таблицы */
@@ -157,6 +174,45 @@ namespace Theater
             TableSave();
         }
 
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            String _authorID = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            String _directorID = dataGridView1[9, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            String _producerID = dataGridView1[10, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            String _designerID = dataGridView1[11, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            String _conductorID = dataGridView1[12, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            if ((_authorID != "") && (_directorID != "") && (_producerID != "") && (_designerID != "") && (_conductorID != ""))
+            {
+                ShowTable2(_authorID, _directorID, _producerID, _designerID, _conductorID);
+            }
+            else
+            {
+                _dataSetFromTable2.Clear();
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if ((dataGridView1.ColumnCount > 10) && (dataGridView1.RowCount > 0))
+            {
+                String _authorID = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                String _directorID = dataGridView1[9, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                String _producerID = dataGridView1[10, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                String _designerID = dataGridView1[11, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                String _conductorID = dataGridView1[12, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                if ((_authorID != "") && (_directorID != "") && (_producerID != "") && (_designerID != "") && (_conductorID != ""))
+                {
+                    ShowTable2(_authorID, _directorID, _producerID, _designerID, _conductorID);
+                }
+                else
+                {
+                    _dataSetFromTable2.Clear();
+                }
+            }
+        }
+
+        
+        
         
         
     }
