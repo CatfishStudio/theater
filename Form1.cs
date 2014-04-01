@@ -94,6 +94,24 @@ namespace Theater
             ShowPlaces();
         }
 
+        private void ShowTickets()
+        {
+            Tickets fTickets = new Tickets();
+            fTickets.MdiParent = this;
+            fTickets.fParent = this;
+            fTickets.Show();
+        }
+
+        private void билетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowTickets();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            ShowTickets();
+        }
+
         
     }
 }

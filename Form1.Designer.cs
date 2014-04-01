@@ -145,8 +145,9 @@
             // 
             this.билетToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("билетToolStripMenuItem.Image")));
             this.билетToolStripMenuItem.Name = "билетToolStripMenuItem";
-            this.билетToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.билетToolStripMenuItem.Text = "Билет";
+            this.билетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.билетToolStripMenuItem.Text = "Билеты";
+            this.билетToolStripMenuItem.Click += new System.EventHandler(this.билетToolStripMenuItem_Click);
             // 
             // жуToolStripMenuItem
             // 
@@ -161,14 +162,14 @@
             // 
             this.труппыToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("труппыToolStripMenuItem.Image")));
             this.труппыToolStripMenuItem.Name = "труппыToolStripMenuItem";
-            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.труппыToolStripMenuItem.Text = "Труппы";
             // 
             // репертуарToolStripMenuItem
             // 
             this.репертуарToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("репертуарToolStripMenuItem.Image")));
             this.репертуарToolStripMenuItem.Name = "репертуарToolStripMenuItem";
-            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.репертуарToolStripMenuItem.Text = "Репертуар";
             // 
             // справкаToolStripMenuItem
@@ -272,6 +273,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator2
             // 

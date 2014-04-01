@@ -10,3 +10,5 @@ C:\GIT\Theater\Theater\obj\Debug\Theater.Authors.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Staff.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Spectacle.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Places.resources
+C:\GIT\Theater\Theater\obj\Debug\Theater.Tickets.resources
+C:\GIT\Theater\Theater\obj\Debug\Theater.Ticket.resources
