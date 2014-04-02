@@ -112,6 +112,23 @@ namespace Theater
             ShowTickets();
         }
 
+        private void ShowTroupe()
+        {
+            Troupe fTroupe = new Troupe();
+            fTroupe.MdiParent = this;
+            fTroupe.Show();
+        }
+
+        private void труппыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowTroupe();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            ShowTroupe();
+        }
+
         
     }
 }

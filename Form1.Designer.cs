@@ -162,14 +162,15 @@
             // 
             this.труппыToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("труппыToolStripMenuItem.Image")));
             this.труппыToolStripMenuItem.Name = "труппыToolStripMenuItem";
-            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.труппыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.труппыToolStripMenuItem.Text = "Труппы";
+            this.труппыToolStripMenuItem.Click += new System.EventHandler(this.труппыToolStripMenuItem_Click);
             // 
             // репертуарToolStripMenuItem
             // 
             this.репертуарToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("репертуарToolStripMenuItem.Image")));
             this.репертуарToolStripMenuItem.Name = "репертуарToolStripMenuItem";
-            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.репертуарToolStripMenuItem.Text = "Репертуар";
             // 
             // справкаToolStripMenuItem
@@ -288,6 +289,7 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripButton7
             // 

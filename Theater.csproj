@@ -96,6 +96,9 @@
     <EmbeddedResource Include="Tickets.resx">
       <DependentUpon>Tickets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Troupe.resx">
+      <DependentUpon>Troupe.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -134,6 +137,12 @@
     </Compile>
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Troupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Troupe.Designer.cs">
+      <DependentUpon>Troupe.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

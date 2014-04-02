@@ -67,8 +67,15 @@ namespace Theater
                     "VALUES (" + comboBox1.Text + ", " + comboBox2.Text + ", " + comboBox3.Text + ", " + comboBox4.Text + ")";
                 if (_sqlServerShort.ExecuteNonQuery())
                 {
-                    fTickets.TableUpdate();
-                    this.Close();
+                    try
+                    {
+                        fTickets.TableUpdate();
+                        this.Close();
+                    }
+                    catch
+                    {
+                        this.Close();
+                    }
                 }
                 else MessageBox.Show("Произошла ошибка сохранения новых данных.");
 
@@ -84,8 +91,15 @@ namespace Theater
                     ") WHERE (ticket_id = " + ID.ToString() + ")";
                 if (_sqlServerShort.ExecuteNonQuery())
                 {
-                    fTickets.TableUpdate();
-                    this.Close();
+                    try
+                    {
+                        fTickets.TableUpdate();
+                        this.Close();
+                    }
+                    catch
+                    {
+                        this.Close();
+                    }
                 }
                 else MessageBox.Show("Произошла ошибка сохранения изменённых данных.");
             }
