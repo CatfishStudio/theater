@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Theater
 {
-    public partial class Troupe : Form
+    public partial class Repertoire : Form
     {
-        public Troupe()
+        public Repertoire()
         {
             InitializeComponent();
         }
@@ -24,18 +24,14 @@ namespace Theater
         private DataSet _dataSetSpectacle = new DataSet();
         private DataSet _dataSetEmployee = new DataSet();
 
-        private SqlServerFull _sqlServer3 = new SqlServerFull();
-        private DataSet _dataSetFromTable2 = new DataSet();
-
-
         /* Загрузка данных */
         private void TableLoad()
         {
             _dataSet.Clear();
-            _dataSet.DataSetName = "troupe";
-            _sqlServer1.SelectSqlCommand = "SELECT * FROM troupe";
+            _dataSet.DataSetName = "repertoire";
+            _sqlServer1.SelectSqlCommand = "SELECT * FROM repertoire";
 
-            _sqlServer1.InsertSqlCommand = "INSERT INTO troupe (troupe_spectacle, troupe_party, troupe_role)" +
+            _sqlServer1.InsertSqlCommand = "INSERT INTO repertoire ()" +
                                     " VALUES (@troupe_spectacle, @troupe_party, @troupe_role)";
             _sqlServer1.InsertParametersAdd("@troupe_spectacle", SqlDbType.Int, 4, "troupe_spectacle");
             _sqlServer1.InsertParametersAdd("@troupe_party", SqlDbType.Int, 4, "troupe_party");
@@ -94,99 +90,13 @@ namespace Theater
             dataGridView1.Columns.Add(cBox2);
         }
 
-        /* Обновление данных в таблице */
-        private void TableUpdate()
-        {
-            _dataSet.Clear();
-            _dataSet.DataSetName = "troupe";
-            _sqlServer1.SelectSqlCommand = "SELECT * FROM troupe";
-            if (_sqlServer1.ExecuteFill(_dataSet, "troupe"))
-            {
-                _bindingSource.DataSource = _dataSet;
-                _bindingSource.DataMember = "troupe";
-                bindingNavigator1.BindingSource = _bindingSource;
-                dataGridView1.DataSource = _bindingSource;
-            }
 
-        }
 
-        /* Сохранение данных а таблице базы данных */
-        private void TableSave()
-        {
-            if (_sqlServer1.ExecuteUpdate(_dataSet, "troupe"))
-            {
-                TableUpdate();
-            }
-        }
 
-        /* Загрузка данных из других таблиц */
-        private void ShowTable2(String _spectacleID, String _partyID)
-        {
-            _dataSetFromTable2.Clear();
-            _dataSetFromTable2.DataSetName = "spectacle";
-            _sqlServer3.SelectSqlCommand = "SELECT spectacle.spectacle_id, spectacle.spectacle_name, employee.employee_id, employee.employee_name FROM employee, spectacle" +
-                " WHERE (spectacle.spectacle_id = " + _spectacleID + " AND (employee.employee_id = " + _partyID + "))";
-            if (_sqlServer3.ExecuteFill(_dataSetFromTable2, "spectacle"))
-            {
-                dataGridView2.DataSource = _dataSetFromTable2;
-                dataGridView2.DataMember = "spectacle";
-            }
-        }
 
-        private void Troupe_Load(object sender, EventArgs e)
+        private void Repertoire_Load(object sender, EventArgs e)
         {
-            TableLoad();
-        }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            TableUpdate();
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            TableSave();
-        }
-
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            String _spectacleID = dataGridView1[4, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _partyID = dataGridView1[5, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            if ((_spectacleID != "") && (_partyID != ""))
-            {
-                ShowTable2(_spectacleID, _partyID);
-            }
-            else
-            {
-                _dataSetFromTable2.Clear();
-            }
-        }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            String _spectacleID = "";
-            String _partyID = "";
-                
-            if ((dataGridView1.ColumnCount > 5) && (dataGridView1.RowCount > 0))
-            {
-                try
-                {
-                    _spectacleID = dataGridView1[4, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                    _partyID = dataGridView1[5, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                }
-                catch
-                {
-                    TableUpdate();
-                }
-                if ((_spectacleID != "") && (_partyID != ""))
-                {
-                    ShowTable2(_spectacleID, _partyID);
-                }
-                else
-                {
-                    _dataSetFromTable2.Clear();
-                }
-            }
         }
     }
 }

@@ -13,3 +13,4 @@ C:\GIT\Theater\Theater\obj\Debug\Theater.Places.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Tickets.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Ticket.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Troupe.resources
+C:\GIT\Theater\Theater\obj\Debug\Theater.Repertoire.resources

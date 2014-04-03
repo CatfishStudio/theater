@@ -172,6 +172,7 @@
             this.репертуарToolStripMenuItem.Name = "репертуарToolStripMenuItem";
             this.репертуарToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.репертуарToolStripMenuItem.Text = "Репертуар";
+            this.репертуарToolStripMenuItem.Click += new System.EventHandler(this.репертуарToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -299,6 +300,7 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton7.Text = "toolStripButton7";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // Form1
             // 

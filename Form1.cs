@@ -129,6 +129,24 @@ namespace Theater
             ShowTroupe();
         }
 
+        private void ShowRepertoire()
+        {
+            Repertoire fRepertoire = new Repertoire();
+            fRepertoire.MdiParent = this;
+            fRepertoire.Show();
+        
+        }
+
+        private void репертуарToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowRepertoire();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            ShowRepertoire();
+        }
+
         
     }
 }

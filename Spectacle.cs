@@ -193,13 +193,26 @@ namespace Theater
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            String _authorID = "";
+            String _directorID = "";
+            String _producerID = "";
+            String _designerID = "";
+            String _conductorID = "";
+                
             if ((dataGridView1.ColumnCount > 10) && (dataGridView1.RowCount > 0))
             {
-                String _authorID = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                String _directorID = dataGridView1[9, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                String _producerID = dataGridView1[10, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                String _designerID = dataGridView1[11, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-                String _conductorID = dataGridView1[12, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                try
+                {
+                    _authorID = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                    _directorID = dataGridView1[9, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                    _producerID = dataGridView1[10, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                    _designerID = dataGridView1[11, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                    _conductorID = dataGridView1[12, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                }
+                catch
+                {
+                    TableUpdate();
+                }
                 if ((_authorID != "") && (_directorID != "") && (_producerID != "") && (_designerID != "") && (_conductorID != ""))
                 {
                     ShowTable2(_authorID, _directorID, _producerID, _designerID, _conductorID);
