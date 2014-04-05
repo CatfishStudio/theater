@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace Theater
 {
     public partial class Form1 : Form
@@ -146,6 +147,19 @@ namespace Theater
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             ShowRepertoire();
+        }
+
+        private void ShowReport()
+        {
+            Report fReport = new Report();
+            fReport.MdiParent = this;
+            fReport.Show();
+            
+        }
+
+        private void общийОтчётToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowReport();   
         }
 
         
