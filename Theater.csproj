@@ -55,6 +55,13 @@
     <Compile Include="Authors.Designer.cs">
       <DependentUpon>Authors.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectConfig.cs" />
+    <Compile Include="ConnectServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectServer.Designer.cs">
+      <DependentUpon>ConnectServer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FieldTableDate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Authors.resx">
       <DependentUpon>Authors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectServer.resx">
+      <DependentUpon>ConnectServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

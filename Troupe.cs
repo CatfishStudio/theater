@@ -110,7 +110,7 @@ namespace Theater
 
         }
 
-        /* Сохранение данных а таблице базы данных */
+        /* Сохранение данных в таблице базы данных */
         private void TableSave()
         {
             if (_sqlServer1.ExecuteUpdate(_dataSet, "troupe"))
@@ -148,20 +148,7 @@ namespace Theater
             TableSave();
         }
 
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            String _spectacleID = dataGridView1[4, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _partyID = dataGridView1[5, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            if ((_spectacleID != "") && (_partyID != ""))
-            {
-                ShowTable2(_spectacleID, _partyID);
-            }
-            else
-            {
-                _dataSetFromTable2.Clear();
-            }
-        }
-
+        
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             String _spectacleID = "";
@@ -176,7 +163,7 @@ namespace Theater
                 }
                 catch
                 {
-                    TableUpdate();
+                    //TableUpdate();
                 }
                 if ((_spectacleID != "") && (_partyID != ""))
                 {

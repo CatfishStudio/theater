@@ -66,7 +66,7 @@ namespace Theater
                 fTicket.MdiParent = fParent;
                 fTicket.Text = "Изменить билет.";
                 fTicket.fTickets = this;
-                fTicket.ID = dataGridView1[1, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                fTicket.ID = dataGridView1[0, dataGridView1.CurrentCell.RowIndex].Value.ToString();
                 fTicket.Show();
             }
         }

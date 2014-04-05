@@ -19,7 +19,8 @@ namespace Theater
         public SqlServerShort()
         {
             _connection = new SqlConnection();
-            _connection.ConnectionString = "server=SOMOV-PC\\SQLEXPRESS;uid=sa;password=12345;database=theater";
+            //_connection.ConnectionString = "server=SOMOV-PC\\SQLEXPRESS;uid=sa;password=12345;database=theater";
+            _connection.ConnectionString = "server=" + ConnectConfig.server + ";uid=" + ConnectConfig.uid + ";password=" + ConnectConfig.password + ";database=" + ConnectConfig.database;
             _command = new SqlCommand("", _connection);
         }
 

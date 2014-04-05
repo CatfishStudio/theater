@@ -84,11 +84,11 @@ namespace Theater
             if (this.Text == "Изменить билет.")
             {
                 SqlServerShort _sqlServerShort = new SqlServerShort();
-                _sqlServerShort.SqlCommand = "UPDATE ticket SET (ticket_spectacle = " + comboBox1.Text + 
+                _sqlServerShort.SqlCommand = "UPDATE ticket SET ticket_spectacle = " + comboBox1.Text + 
                     ", ticket_place = " + comboBox2.Text + 
                     ", ticket_order = " + comboBox3.Text + 
                     ", ticket_subscription = " + comboBox4.Text + 
-                    ") WHERE (ticket_id = " + ID.ToString() + ")";
+                    " WHERE (ticket_id = " + ID.ToString() + ")";
                 if (_sqlServerShort.ExecuteNonQuery())
                 {
                     try

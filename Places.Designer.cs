@@ -217,6 +217,7 @@
             this.Column1.DataPropertyName = "places_id";
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 50;
             // 
             // Column2

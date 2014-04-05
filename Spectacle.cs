@@ -174,23 +174,7 @@ namespace Theater
             TableSave();
         }
 
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            String _authorID = dataGridView1[8, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _directorID = dataGridView1[9, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _producerID = dataGridView1[10, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _designerID = dataGridView1[11, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            String _conductorID = dataGridView1[12, dataGridView1.CurrentCell.RowIndex].Value.ToString();
-            if ((_authorID != "") && (_directorID != "") && (_producerID != "") && (_designerID != "") && (_conductorID != ""))
-            {
-                ShowTable2(_authorID, _directorID, _producerID, _designerID, _conductorID);
-            }
-            else
-            {
-                _dataSetFromTable2.Clear();
-            }
-        }
-
+        
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             String _authorID = "";
@@ -211,7 +195,7 @@ namespace Theater
                 }
                 catch
                 {
-                    TableUpdate();
+                    //TableUpdate();
                 }
                 if ((_authorID != "") && (_directorID != "") && (_producerID != "") && (_designerID != "") && (_conductorID != ""))
                 {

@@ -18,7 +18,8 @@ namespace Theater
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //...
+            ConnectServer fConnectServer = new ConnectServer();
+            fConnectServer.ShowDialog();
         }
 
         private void выходИзПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
