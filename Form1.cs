@@ -162,6 +162,18 @@ namespace Theater
             ShowReport();   
         }
 
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            ShowReport();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About fAbout = new About();
+            fAbout.MdiParent = this;
+            fAbout.Show();
+        }
+
         
     }
 }

@@ -16,3 +16,4 @@ C:\GIT\Theater\Theater\obj\Debug\Theater.Troupe.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Repertoire.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.ConnectServer.resources
 C:\GIT\Theater\Theater\obj\Debug\Theater.Report.resources
+C:\GIT\Theater\Theater\obj\Debug\Theater.About.resources

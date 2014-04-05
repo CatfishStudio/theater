@@ -192,6 +192,7 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе.";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -338,6 +339,7 @@
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton8.Text = "toolStripButton8";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // Form1
             // 
